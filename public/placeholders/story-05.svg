@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  
+  <filter id="gr4" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="7" result="n"/>
+    <feColorMatrix in="n" type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+  </filter>
+  <rect width="800" height="1000" fill="#07050C"/>
+  <g>
+    <rect x="22" y="0" width="30" height="1000" fill="#2BF0C4" opacity="0.21"/>
+    <rect x="519" y="0" width="45" height="1000" fill="#2BF0C4" opacity="0.26"/>
+    <rect x="568" y="0" width="24" height="1000" fill="#2BF0C4" opacity="0.22"/>
+    <rect x="505" y="0" width="35" height="1000" fill="#2BF0C4" opacity="0.23"/>
+    <rect x="662" y="0" width="49" height="1000" fill="#2BF0C4" opacity="0.10"/>
+    <rect x="573" y="0" width="40" height="1000" fill="#2BF0C4" opacity="0.26"/>
+    <rect x="571" y="0" width="27" height="1000" fill="#2BF0C4" opacity="0.24"/>
+    <rect x="189" y="0" width="29" height="1000" fill="#2BF0C4" opacity="0.16"/>
+    <rect x="561" y="0" width="20" height="1000" fill="#2BF0C4" opacity="0.15"/>
+  </g>
+  <ellipse cx="400" cy="420" rx="272" ry="300" fill="#2BF0C4" opacity="0.14"/>
+  <!-- abstract figure mass -->
+  <path d="M400 200 L528 420 L496 780 L304 780 L272 420 Z" fill="#07050C" opacity="0.9"/>
+  <path d="M336 300 L463.99999999999994 300 L463.99999999999994 400 L336 400 Z" fill="#2BF0C4" opacity="0.55"/>
+  <rect width="800" height="1000" filter="url(#gr4)" opacity="0.35" style="mix-blend-mode:overlay"/>
+  <rect x="1" y="1" width="798" height="998" fill="none" stroke="#A9A0B8" stroke-width="2" opacity="0.35"/>
+  <text x="32" y="966" fill="#A9A0B8" font-family="Arial Narrow, Arial, sans-serif" font-size="26" letter-spacing="6">PLACEHOLDER / THE RETURN</text>
+</svg>

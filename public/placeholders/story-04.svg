@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  
+  <filter id="gr3" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="7" result="n"/>
+    <feColorMatrix in="n" type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+  </filter>
+  <rect width="800" height="1000" fill="#07050C"/>
+  <g>
+    <rect x="798" y="0" width="51" height="1000" fill="#FF4FC3" opacity="0.33"/>
+    <rect x="235" y="0" width="10" height="1000" fill="#FF4FC3" opacity="0.15"/>
+    <rect x="292" y="0" width="41" height="1000" fill="#FF4FC3" opacity="0.29"/>
+    <rect x="503" y="0" width="26" height="1000" fill="#FF4FC3" opacity="0.26"/>
+    <rect x="400" y="0" width="31" height="1000" fill="#FF4FC3" opacity="0.20"/>
+  </g>
+  <ellipse cx="400" cy="420" rx="272" ry="300" fill="#FF4FC3" opacity="0.14"/>
+  <!-- abstract figure mass -->
+  <path d="M400 200 L528 420 L496 780 L304 780 L272 420 Z" fill="#07050C" opacity="0.9"/>
+  <path d="M336 300 L463.99999999999994 300 L463.99999999999994 400 L336 400 Z" fill="#FF4FC3" opacity="0.55"/>
+  <rect width="800" height="1000" filter="url(#gr3)" opacity="0.35" style="mix-blend-mode:overlay"/>
+  <rect x="1" y="1" width="798" height="998" fill="none" stroke="#A9A0B8" stroke-width="2" opacity="0.35"/>
+  <text x="32" y="966" fill="#A9A0B8" font-family="Arial Narrow, Arial, sans-serif" font-size="26" letter-spacing="6">PLACEHOLDER / DEMONS IN MY HEAD</text>
+</svg>

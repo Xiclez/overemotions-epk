@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  
+  <filter id="ga6" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="3" seed="7" result="n"/>
+    <feColorMatrix in="n" type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+  </filter>
+  <rect width="1000" height="1000" fill="#100C18"/>
+  <rect width="1000" height="1000" fill="#07050C" opacity="0.6"/>
+  <circle cx="321" cy="365" r="216" fill="none" stroke="#2BF0C4" stroke-width="3.1" opacity="0.31"/>
+  <rect x="9" y="78" width="326" height="326" fill="#2BF0C4" opacity="0.27" transform="rotate(29.4 172 241)"/>
+  <circle cx="766" cy="638" r="98" fill="none" stroke="#2BF0C4" stroke-width="7.4" opacity="0.58"/>
+  <rect x="741" y="529" width="137" height="137" fill="#2BF0C4" opacity="0.19" transform="rotate(8.2 809 598)"/>
+  <circle cx="770" cy="383" r="292" fill="none" stroke="#2BF0C4" stroke-width="10.0" opacity="0.62"/>
+  <path d="M0 1000 L1000 0" stroke="#2BF0C4" stroke-width="1.5" opacity="0.4"/>
+  <rect width="1000" height="1000" filter="url(#ga6)" opacity="0.4" style="mix-blend-mode:overlay"/>
+  <text x="48" y="944" fill="#EFE9F7" font-family="Arial Narrow, Arial, sans-serif" font-size="46" letter-spacing="10" opacity="0.8">ART 07</text>
+  <text x="48" y="890" fill="#2BF0C4" font-family="Arial Narrow, Arial, sans-serif" font-size="30" letter-spacing="8">PLACEHOLDER</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  
+  <filter id="gs" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" seed="7" result="n"/>
+    <feColorMatrix in="n" type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+  </filter>
+  <rect width="1920" height="1080" fill="#07050C"/>
+  <ellipse cx="960" cy="420" rx="820" ry="520" fill="#7C4DFF" opacity="0.22"/>
+  <ellipse cx="960" cy="380" rx="420" ry="300" fill="#D4FF3F" opacity="0.16"/>
+  <path d="M760 240 L1160 240 L1120 700 L960 900 L800 700 Z" fill="#07050C" opacity="0.92"/>
+  <path d="M830 400 L930 400 L900 500 L830 470 Z" fill="#D4FF3F" opacity="0.85"/>
+  <path d="M1090 400 L990 400 L1020 500 L1090 470 Z" fill="#D4FF3F" opacity="0.85"/>
+  <g stroke="#D4FF3F" stroke-width="3" opacity="0.7">
+    <path d="M900 600 L900 680 M940 600 L940 700 M980 600 L980 700 M1020 600 L1020 680"/>
+    <path d="M870 590 L1050 590"/>
+  </g>
+  <g stroke="#A9A0B8" stroke-width="2" opacity="0.3">
+    <path d="M120 120 L200 120 M120 120 L120 200"/>
+    <path d="M1800 120 L1720 120 M1800 120 L1800 200"/>
+    <path d="M120 960 L200 960 M120 960 L120 880"/>
+    <path d="M1800 960 L1720 960 M1800 960 L1800 880"/>
+  </g>
+  <rect width="1920" height="1080" filter="url(#gs)" opacity="0.4" style="mix-blend-mode:overlay"/>
+  <text x="128" y="1010" fill="#A9A0B8" font-family="Arial Narrow, Arial, sans-serif" font-size="30" letter-spacing="10">PLACEHOLDER POSTER / DROP showreel.mp4 IN /public/media</text>
+</svg>

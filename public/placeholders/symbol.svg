@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" width="120" height="140" role="img" aria-label="Rey Calaca temporary symbol">
+  <g fill="none" stroke="#FF4D00" stroke-width="2.5" stroke-linejoin="miter">
+    <!-- crown / halo -->
+    <path d="M18 34 L28 8 L44 26 L60 2 L76 26 L92 8 L102 34"/>
+    <!-- mask outline -->
+    <path d="M18 34 L18 82 L38 118 L60 138 L82 118 L102 82 L102 34 Z"/>
+    <!-- eyes -->
+    <path d="M34 56 L52 56 L46 76 L34 70 Z" fill="#A30D0D" stroke="none"/>
+    <path d="M86 56 L68 56 L74 76 L86 70 Z" fill="#A30D0D" stroke="none"/>
+    <!-- jaw teeth -->
+    <path d="M46 96 L46 112 M54 98 L54 118 M60 98 L60 122 M66 98 L66 118 M74 96 L74 112"/>
+    <path d="M40 94 L80 94"/>
+  </g>
+  <path d="M60 2 L60 -6" stroke="#FF4D00" stroke-width="2.5"/>
+</svg>

@@ -1,0 +1,493 @@
+@import "tailwindcss";
+
+/* ============================================================================
+   OVER EMOTIONS — DESIGN SYSTEM TOKENS
+   Single source of truth for colour, type, space, border, shadow, z-index,
+   duration, easing, breakpoints and parallax intensity.
+   Motion tokens are mirrored in TypeScript at /lib/motion.ts — if you change a
+   duration or easing curve here, change it there too.
+   ========================================================================== */
+
+@theme {
+  /* ---------------------------------------------------------------- COLOUR */
+  /* Core brand palette. Never hardcode these hex values in components.
+     Deep ink-violet night, pale lavender type, one acid accent. The colour
+     richness lives in the shader; the interface stays disciplined. */
+  --color-void: #07050c;
+  --color-charcoal: #100c18;
+  --color-iron: #1a1524;
+  --color-bone: #efe9f7;
+  --color-bone-dim: #a9a0b8;
+  --color-acid: #d4ff3f;
+  --color-ultra: #7c4dff;
+  --color-gray: #7b7289;
+
+  /* Mode accents (psytrance / psytech). Acid is the constant. */
+  --color-orchid: #ff4fc3;
+  --color-aqua: #2bf0c4;
+
+  /* Semantic aliases (shadcn/ui-compatible naming) */
+  --color-background: var(--color-void);
+  --color-foreground: var(--color-bone);
+  --color-surface: var(--color-charcoal);
+  --color-surface-raised: var(--color-iron);
+  --color-primary: var(--color-acid);
+  --color-primary-foreground: var(--color-void);
+  --color-secondary: var(--color-ultra);
+  --color-secondary-foreground: var(--color-bone);
+  --color-muted: var(--color-gray);
+  --color-muted-foreground: var(--color-bone-dim);
+  --color-border: #261f33;
+  --color-border-strong: #3b3249;
+  --color-ring: var(--color-acid);
+  --color-destructive: #ff5470;
+
+  /* ------------------------------------------------------------ TYPOGRAPHY */
+  /* Font families are injected by next/font in app/layout.tsx */
+  --font-display: var(--font-climate), "Arial Black", sans-serif;
+  --font-condensed: var(--font-chakra), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+
+  /* Display scale — Climate Crisis is extremely wide, so the scale is tighter
+     than a condensed face would allow. Headlines only, never paragraphs. */
+  --text-display-sm: clamp(1.75rem, 5.2vw, 3rem);
+  --text-display-sm--line-height: 0.98;
+  --text-display-md: clamp(2.25rem, 7.5vw, 5rem);
+  --text-display-md--line-height: 0.95;
+  --text-display-lg: clamp(3rem, 11vw, 9rem);
+  --text-display-lg--line-height: 0.9;
+  --text-display-xl: clamp(3rem, 12.5vw, 13rem);
+  --text-display-xl--line-height: 0.88;
+
+  /* Data / label scale — condensed face, uppercase, tracked out */
+  --text-label-xs: 0.625rem;
+  --text-label-xs--line-height: 1.2;
+  --text-label-xs--letter-spacing: 0.18em;
+  --text-label-sm: 0.75rem;
+  --text-label-sm--line-height: 1.2;
+  --text-label-sm--letter-spacing: 0.16em;
+  --text-label-md: 0.875rem;
+  --text-label-md--line-height: 1.2;
+  --text-label-md--letter-spacing: 0.12em;
+  --text-label-lg: 1.125rem;
+  --text-label-lg--line-height: 1.1;
+  --text-label-lg--letter-spacing: 0.08em;
+
+  /* Body scale — 16px floor on mobile to avoid iOS auto-zoom */
+  --text-body-sm: 0.9375rem;
+  --text-body-sm--line-height: 1.6;
+  --text-body-md: 1rem;
+  --text-body-md--line-height: 1.65;
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.6;
+
+  /* ----------------------------------------------------------------- SPACE */
+  /* Tailwind's 0.25rem step is kept; the 8px rhythm is enforced by using even
+     steps only (2 = 8px, 4 = 16px, 6 = 24px, 8 = 32px, 12 = 48px, 16 = 64px).
+     Section rhythm tokens below are the canonical vertical scale. */
+  --space-section-y: 6rem; /* 96px — mobile section padding */
+  --space-section-y-lg: 10rem; /* 160px — desktop section padding */
+  --space-gutter: 1.25rem; /* 20px — mobile horizontal inset */
+  --space-gutter-lg: 3rem; /* 48px — desktop horizontal inset */
+  --space-stack: 1.5rem; /* 24px — default block gap */
+
+  /* --------------------------------------------------------------- BORDERS */
+  /* Thin lines, soft-but-small corners. */
+  --radius-plate: 2px;
+  --radius-chip: 1px;
+  --radius-none: 0px;
+  --border-hairline: 1px;
+  --border-plate: 2px;
+
+  /* --------------------------------------------------------------- SHADOWS */
+  /* No soft SaaS drop shadows. Only hard offsets and emissive glows. */
+  --shadow-plate: 4px 4px 0 0 rgba(0, 0, 0, 0.9);
+  --shadow-plate-lg: 8px 8px 0 0 rgba(0, 0, 0, 0.9);
+  --shadow-glow-acid: 0 0 32px -4px rgba(212, 255, 63, 0.4);
+  --shadow-glow-ultra: 0 0 32px -4px rgba(124, 77, 255, 0.5);
+  --shadow-inset-plate: inset 0 1px 0 0 rgba(239, 233, 247, 0.06);
+
+  /* --------------------------------------------------------------- Z-INDEX */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 20;
+  --z-header: 40;
+  --z-cursor: 60;
+  --z-overlay: 80;
+  --z-drawer: 90;
+  --z-modal: 100;
+  --z-intro: 120;
+
+  /* ------------------------------------------------------------- DURATIONS */
+  --duration-instant: 100ms;
+  --duration-fast: 180ms;
+  --duration-normal: 320ms;
+  --duration-slow: 640ms;
+  --duration-cinematic: 1200ms;
+
+  /* ---------------------------------------------------------------- EASING */
+  --ease-out-industrial: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-industrial: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-in-blade: cubic-bezier(0.7, 0, 0.84, 0);
+
+  /* ----------------------------------------------------------- BREAKPOINTS */
+  /* 320-479 / 480-767 / 768-1023 / 1024-1439 / 1440+ */
+  --breakpoint-xs: 30rem; /* 480 */
+  --breakpoint-sm: 48rem; /* 768 */
+  --breakpoint-md: 64rem; /* 1024 */
+  --breakpoint-lg: 90rem; /* 1440 */
+  --breakpoint-xl: 120rem; /* 1920 */
+
+  /* -------------------------------------------------------------- PARALLAX */
+  /* Consumed by lib/motion.ts. Keep values low — disorientation is a bug. */
+  --parallax-subtle: 20px;
+  --parallax-medium: 60px;
+  --parallax-strong: 120px;
+
+  /* ------------------------------------------------------------ ANIMATIONS */
+  --animate-fade-in: fade-in var(--duration-normal) var(--ease-out-industrial)
+    both;
+  --animate-plate-in: plate-in var(--duration-normal)
+    var(--ease-out-industrial) both;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee-slow: marquee 80s linear infinite;
+  --animate-signal: signal 1.6s var(--ease-in-out-industrial) infinite;
+  --animate-flicker: flicker 6s steps(1, end) infinite;
+  --animate-pulse-ring: pulse-ring 2.4s var(--ease-out-industrial) infinite;
+  /* Duration + delay are overridden inline per bar so the tempo can follow BPM */
+  --animate-waveform: waveform 1.6s var(--ease-in-out-industrial) infinite;
+  /* Letters condense out of liquid (Climate Crisis YEAR axis). */
+  --animate-solidify: solidify 3.2s cubic-bezier(0.45, 0, 0.2, 1) 0.2s both;
+  /* Splash logo: comes into focus from a liquid blur. */
+  --animate-melt-in: melt-in 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+@keyframes melt-in {
+  from {
+    opacity: 0;
+    filter: blur(14px);
+    transform: scaleY(1.25) translateY(8%);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+@keyframes solidify {
+  from {
+    font-variation-settings: "YEAR" 2050;
+    opacity: 0.2;
+  }
+  35% {
+    opacity: 1;
+  }
+  to {
+    font-variation-settings: "YEAR" 1979;
+    opacity: 1;
+  }
+}
+
+@keyframes waveform {
+  0%,
+  100% {
+    transform: scaleY(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1.32);
+    opacity: 0.95;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes plate-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes signal {
+  0%,
+  100% {
+    transform: scaleX(0.15);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  0%,
+  96%,
+  100% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0.4;
+  }
+  98% {
+    opacity: 0.9;
+  }
+  99% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* ============================================================================
+   BASE
+   ========================================================================== */
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+  background-color: var(--color-void);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  font-size: var(--text-body-md);
+  line-height: 1.65;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+  ::selection {
+    background-color: var(--color-acid);
+    color: var(--color-void);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-acid);
+    outline-offset: 3px;
+  }
+
+  /* Fine-pointer devices get the custom cursor; the native cursor is only
+     hidden once <CustomCursor /> has mounted and set data-cursor-ready. */
+  @media (pointer: fine) {
+    html[data-cursor-ready="true"],
+    html[data-cursor-ready="true"] * {
+      cursor: none;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Reduced motion: kill every looping animation and all smooth scrolling.
+     Information must stay reachable without motion. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ============================================================================
+   UTILITIES
+   ========================================================================== */
+
+/* Type presets ------------------------------------------------------------ */
+/* Climate Crisis carries a YEAR axis (1979 → 2050) that melts the letters.
+   --melt drives it everywhere; headings stay almost solid by default. */
+@utility font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-variation-settings: "YEAR" var(--melt, 1979);
+}
+
+@utility label {
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Industrial frames ------------------------------------------------------- */
+
+/* Metal plate: hairline frame + top inner highlight, square corners. */
+@utility plate {
+  border: var(--border-hairline) solid var(--color-border);
+  background-color: color-mix(in oklab, var(--color-charcoal) 70%, transparent);
+  box-shadow: var(--shadow-inset-plate);
+  border-radius: var(--radius-plate);
+}
+
+/* Diagonal cut corner — used instead of rounded cards. */
+@utility cut-corner {
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+
+@utility cut-corner-lg {
+  clip-path: polygon(0 0, calc(100% - 32px) 0, 100% 32px, 100% 100%, 0 100%);
+}
+
+@utility cut-corner-both {
+  clip-path: polygon(
+    18px 0,
+    100% 0,
+    100% calc(100% - 18px),
+    calc(100% - 18px) 100%,
+    0 100%,
+    0 18px
+  );
+}
+
+/* Hairline rules used as editorial structure, not decoration. */
+@utility rule-x {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--color-border-strong) 12%,
+    var(--color-border-strong) 88%,
+    transparent
+  );
+  height: 1px;
+}
+
+/* Texture ---------------------------------------------------------------- */
+
+/* Film grain. Static SVG noise — no JS, no canvas, no repaint cost. */
+@utility grain {
+  position: relative;
+}
+
+@utility grain-layer {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.28;
+  mix-blend-mode: overlay;
+  background-image: url("/placeholders/grain.svg");
+  background-size: 180px 180px;
+}
+
+/* Concrete / scanline overlays for section backgrounds. */
+@utility scanlines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(239, 233, 247, 0.035) 0px,
+    rgba(239, 233, 247, 0.035) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
+
+@utility hatch {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(239, 233, 247, 0.05) 0px,
+    rgba(239, 233, 247, 0.05) 1px,
+    transparent 1px,
+    transparent 7px
+  );
+}
+
+/* Outlined display type for layered hero compositions.
+   Named `type-outline`, not `text-outline`: anything starting with `text-` is
+   parsed as a size-or-colour utility by tailwind-merge and would be deduped
+   against the type scale. */
+@utility type-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-bone-dim);
+}
+
+@utility type-outline-acid {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-acid);
+}
+
+/* Layout helpers --------------------------------------------------------- */
+@utility gutter {
+  padding-left: max(var(--space-gutter), env(safe-area-inset-left));
+  padding-right: max(var(--space-gutter), env(safe-area-inset-right));
+}
+
+@utility section-y {
+  padding-block: var(--space-section-y);
+}
+
+/* Edge fade for horizontal scrollers and marquees. */
+@utility mask-edges-x {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+}
+
+/* Hides scrollbars on intentional scroll-snap carousels (controls are always
+   provided alongside — never scroll-only affordances). */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

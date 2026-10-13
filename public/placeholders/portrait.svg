@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900">
+  
+  <filter id="gp" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="7" result="n"/>
+    <feColorMatrix in="n" type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+  </filter>
+  <rect width="900" height="900" fill="#100C18"/>
+  <ellipse cx="450" cy="360" rx="330" ry="330" fill="#7C4DFF" opacity="0.25"/>
+  <path d="M320 200 L580 200 L560 560 L450 700 L340 560 Z" fill="#07050C" opacity="0.95"/>
+  <path d="M360 320 L430 320 L410 400 L360 380 Z" fill="#D4FF3F"/>
+  <path d="M540 320 L470 320 L490 400 L540 380 Z" fill="#D4FF3F"/>
+  <g stroke="#D4FF3F" stroke-width="3">
+    <path d="M400 470 L400 540 M430 470 L430 560 M470 470 L470 560 M500 470 L500 540"/>
+    <path d="M375 460 L525 460"/>
+  </g>
+  <rect width="900" height="900" filter="url(#gp)" opacity="0.4" style="mix-blend-mode:overlay"/>
+  <text x="40" y="850" fill="#A9A0B8" font-family="Arial Narrow, Arial, sans-serif" font-size="26" letter-spacing="7">PLACEHOLDER PORTRAIT</text>
+</svg>

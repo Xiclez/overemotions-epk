@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  
+  <filter id="gl5" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" seed="7" result="n"/>
+    <feColorMatrix in="n" type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+  </filter>
+  <rect width="1200" height="800" fill="#1E0619"/>
+  <ellipse cx="600" cy="200" rx="540" ry="280" fill="#FF4FC3" opacity="0.2"/>
+  <g>
+    <path d="M203 0 L333 800 L160 800 Z" fill="#FF4FC3" opacity="0.08"/>
+    <path d="M940 0 L1042 800 L832 800 Z" fill="#FF4FC3" opacity="0.18"/>
+    <path d="M679 0 L790 800 L579 800 Z" fill="#FF4FC3" opacity="0.13"/>
+    <path d="M873 0 L917 800 L715 800 Z" fill="#FF4FC3" opacity="0.10"/>
+    <path d="M1062 0 L1126 800 L903 800 Z" fill="#FF4FC3" opacity="0.12"/>
+    <path d="M743 0 L898 800 L672 800 Z" fill="#FF4FC3" opacity="0.15"/>
+  </g>
+  <g>
+    <rect x="627" y="691" width="28" height="109" fill="#07050C" opacity="0.85"/>
+    <rect x="394" y="532" width="14" height="268" fill="#07050C" opacity="0.85"/>
+    <rect x="290" y="612" width="10" height="188" fill="#07050C" opacity="0.85"/>
+    <rect x="818" y="619" width="27" height="181" fill="#07050C" opacity="0.85"/>
+    <rect x="76" y="682" width="24" height="118" fill="#07050C" opacity="0.85"/>
+    <rect x="964" y="709" width="11" height="91" fill="#07050C" opacity="0.85"/>
+    <rect x="383" y="608" width="26" height="192" fill="#07050C" opacity="0.85"/>
+    <rect x="33" y="727" width="27" height="73" fill="#07050C" opacity="0.85"/>
+    <rect x="413" y="536" width="24" height="264" fill="#07050C" opacity="0.85"/>
+    <rect x="824" y="601" width="30" height="199" fill="#07050C" opacity="0.85"/>
+    <rect x="565" y="612" width="29" height="188" fill="#07050C" opacity="0.85"/>
+    <rect x="137" y="697" width="31" height="103" fill="#07050C" opacity="0.85"/>
+    <rect x="40" y="544" width="21" height="256" fill="#07050C" opacity="0.85"/>
+    <rect x="773" y="721" width="11" height="79" fill="#07050C" opacity="0.85"/>
+    <rect x="436" y="697" width="10" height="103" fill="#07050C" opacity="0.85"/>
+    <rect x="730" y="601" width="31" height="199" fill="#07050C" opacity="0.85"/>
+    <rect x="955" y="560" width="31" height="240" fill="#07050C" opacity="0.85"/>
+    <rect x="410" y="703" width="22" height="97" fill="#07050C" opacity="0.85"/>
+    <rect x="796" y="718" width="14" height="82" fill="#07050C" opacity="0.85"/>
+    <rect x="212" y="733" width="18" height="67" fill="#07050C" opacity="0.85"/>
+    <rect x="359" y="658" width="20" height="142" fill="#07050C" opacity="0.85"/>
+    <rect x="537" y="619" width="29" height="181" fill="#07050C" opacity="0.85"/>
+    <rect x="44" y="526" width="31" height="274" fill="#07050C" opacity="0.85"/>
+    <rect x="583" y="727" width="11" height="73" fill="#07050C" opacity="0.85"/>
+    <rect x="252" y="690" width="31" height="110" fill="#07050C" opacity="0.85"/>
+    <rect x="752" y="544" width="24" height="256" fill="#07050C" opacity="0.85"/>
+    <rect x="182" y="636" width="27" height="164" fill="#07050C" opacity="0.85"/>
+    <rect x="243" y="656" width="26" height="144" fill="#07050C" opacity="0.85"/>
+    <rect x="234" y="731" width="29" height="69" fill="#07050C" opacity="0.85"/>
+    <rect x="656" y="550" width="24" height="250" fill="#07050C" opacity="0.85"/>
+    <rect x="808" y="681" width="20" height="119" fill="#07050C" opacity="0.85"/>
+    <rect x="1191" y="592" width="28" height="208" fill="#07050C" opacity="0.85"/>
+    <rect x="1105" y="633" width="33" height="167" fill="#07050C" opacity="0.85"/>
+    <rect x="1049" y="711" width="20" height="89" fill="#07050C" opacity="0.85"/>
+    <rect x="324" y="734" width="25" height="66" fill="#07050C" opacity="0.85"/>
+    <rect x="629" y="611" width="35" height="189" fill="#07050C" opacity="0.85"/>
+    <rect x="65" y="690" width="32" height="110" fill="#07050C" opacity="0.85"/>
+    <rect x="331" y="660" width="29" height="140" fill="#07050C" opacity="0.85"/>
+    <rect x="728" y="648" width="36" height="152" fill="#07050C" opacity="0.85"/>
+    <rect x="555" y="564" width="12" height="236" fill="#07050C" opacity="0.85"/>
+    <rect x="313" y="535" width="19" height="265" fill="#07050C" opacity="0.85"/>
+    <rect x="502" y="690" width="17" height="110" fill="#07050C" opacity="0.85"/>
+    <rect x="421" y="717" width="17" height="83" fill="#07050C" opacity="0.85"/>
+    <rect x="570" y="525" width="28" height="275" fill="#07050C" opacity="0.85"/>
+    <rect x="251" y="682" width="11" height="118" fill="#07050C" opacity="0.85"/>
+    <rect x="1161" y="655" width="27" height="145" fill="#07050C" opacity="0.85"/>
+  </g>
+  <rect y="576" width="1200" height="224.00000000000003" fill="#07050C" opacity="0.65"/>
+  <rect width="1200" height="800" filter="url(#gl5)" opacity="0.42" style="mix-blend-mode:overlay"/>
+  <text x="36" y="52" fill="#A9A0B8" font-family="Arial Narrow, Arial, sans-serif" font-size="24" letter-spacing="7">PLACEHOLDER / BOOTH</text>
+</svg>
