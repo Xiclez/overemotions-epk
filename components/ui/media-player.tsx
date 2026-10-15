@@ -32,7 +32,7 @@ export interface MediaPlayerProps {
   poster: string;
   posterAlt: string;
   title: string;
-  /** Small label rendered over the poster, e.g. "SHOWREEL / 2025". */
+  /** Small label rendered over the poster, e.g. "OFFICIAL VIDEO". */
   kicker?: string;
   className?: string;
   posterClassName?: string;
@@ -186,10 +186,10 @@ export function MediaPlayer({
                     id="media-empty-desc"
                     className="text-body-sm text-bone-dim"
                   >
-                    No showreel file is attached to this mockup yet. Drop{" "}
-                    <code className="text-acid">showreel.mp4</code> into{" "}
+                    No video file is attached yet. Drop{" "}
+                    <code className="text-acid">video.mp4</code> into{" "}
                     <code className="text-acid">/public/media/</code> and set{" "}
-                    <code className="text-acid">showreel.videoSrc</code> in{" "}
+                    <code className="text-acid">officialVideo.videoSrc</code> in{" "}
                     <code className="text-acid">data/presskit.ts</code>.
                   </DialogDescription>
                   <Button variant="outline" onClick={() => setOpen(false)}>

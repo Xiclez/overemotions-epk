@@ -6,7 +6,7 @@
  * ============================================================================
  * A booker who will not scroll past the hero still needs the whole picture. This
  * drawer is that picture, reachable from every scroll position: short bio,
- * genres, formats, showreel, music links, press photos, tech rider, contact, and
+ * genres, formats, music links, press photos, tech rider, contact, and
  * a book button.
  *
  * It is a panel of DIRECT INFORMATION, not a teaser. Nothing here is hidden
@@ -24,7 +24,6 @@ import {
   FileWarning,
   AtSign,
   Mail,
-  MessageCircle,
 } from "lucide-react";
 import {
   Drawer,
@@ -258,18 +257,6 @@ export function BookingDrawer() {
                   {contact.bookingEmail}
                 </a>
               </DataRow>
-              {contact.whatsapp && (
-              <DataRow label="WHATSAPP">
-                <a
-                  href={`https://wa.me/${contact.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-acid hover:underline"
-                >
-                  {contact.whatsappDisplay}
-                </a>
-              </DataRow>
-              )}
               <DataRow label="INSTAGRAM">
                 <a
                   href={contact.instagram}
@@ -300,18 +287,6 @@ export function BookingDrawer() {
                 {getText(dossier.bookCta, locale)}
               </a>
             </Button>
-            {contact.whatsapp && (
-            <Button variant="outline" size="icon" asChild>
-              <a
-                href={`https://wa.me/${contact.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Contact on WhatsApp"
-              >
-                <MessageCircle className="size-4" aria-hidden="true" />
-              </a>
-            </Button>
-            )}
             <Button variant="outline" size="icon" asChild>
               <a
                 href={contact.instagram}

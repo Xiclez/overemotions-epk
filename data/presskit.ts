@@ -264,9 +264,10 @@ export const sections = [
   { id: "credibility", number: "03", label: { en: "TRACK RECORD", es: "TRAYECTORIA" } as Localized },
   { id: "formats", number: "04", label: { en: "SETS", es: "SETS" } as Localized },
   { id: "music", number: "05", label: { en: "MUSIC", es: "MÚSICA" } as Localized },
-  { id: "archive", number: "06", label: { en: "LIVE", es: "EN VIVO" } as Localized },
-  { id: "vault", number: "07", label: { en: "PRESS KIT", es: "PRESS KIT" } as Localized },
-  { id: "booking", number: "08", label: { en: "BOOKING", es: "BOOKING" } as Localized },
+  { id: "video", number: "06", label: { en: "VIDEO", es: "VIDEO" } as Localized },
+  { id: "archive", number: "07", label: { en: "LIVE", es: "EN VIVO" } as Localized },
+  { id: "vault", number: "08", label: { en: "PRESS KIT", es: "PRESS KIT" } as Localized },
+  { id: "booking", number: "09", label: { en: "BOOKING", es: "BOOKING" } as Localized },
 ] as const;
 
 export const navItems = [
@@ -313,7 +314,7 @@ export const story: StoryBlock[] = [
       en: "Humberto Loya started Over Emotions in 2010, in Chihuahua, Mexico. From an early age he was drawn to electronic music, and above all to the powerful, enigmatic world of psytrance.",
       es: "Humberto Loya inició Over Emotions en 2010, en Chihuahua, México. Desde muy joven se sintió atraído por la música electrónica y, sobre todo, por el poderoso y enigmático mundo del psytrance.",
     },
-    image: "/placeholders/story-01.svg",
+    image: "/media/pics/Over1.jpg",
     imageAlt: "Placeholder — retrato del artista",
   },
   {
@@ -325,7 +326,7 @@ export const story: StoryBlock[] = [
       en: "Inspired by Astrix, Bizzare Contact, InterSys and Mad Maxx, he builds tracks that fuse darkness and melody, energy and introspection — intense sounds with a strong emotional charge.",
       es: "Inspirado por Astrix, Bizzare Contact, InterSys y Mad Maxx, construye tracks que fusionan lo oscuro y lo melódico, lo enérgico y lo introspectivo: sonidos intensos con una fuerte carga emocional.",
     },
-    image: "/placeholders/story-02.svg",
+    image: "/media/pics/Over2.jpg",
     imageAlt: "Placeholder — estudio de producción",
   },
   {
@@ -337,7 +338,7 @@ export const story: StoryBlock[] = [
       en: "He quickly earned recognition in the local scene, playing festivals and clubs across Mexico alongside some of the biggest names in psytrance. His hypnotic rhythms and enveloping atmospheres made him one of the most promising talents of his generation.",
       es: "Rápidamente ganó reconocimiento en la escena local, tocando en festivales y clubs de todo México junto a algunos de los nombres más destacados del psytrance. Sus ritmos hipnóticos y atmósferas envolventes lo posicionaron como uno de los talentos más prometedores de su generación.",
     },
-    image: "/placeholders/story-03.svg",
+    image: "/media/pics/Over3.jpg",
     imageAlt: "Placeholder — público en festival",
   },
   {
@@ -349,7 +350,7 @@ export const story: StoryBlock[] = [
       en: "In 2013 he released his first EP, \"Demons In My Head\", on Belgian label Green Tree Records — the release that placed Over Emotions on the international psytrance map.",
       es: "En 2013 lanzó su primer EP, \"Demons In My Head\", a través del sello belga Green Tree Records: el lanzamiento que colocó a Over Emotions en el mapa internacional del psytrance.",
     },
-    image: "/placeholders/story-04.svg",
+    image: "/media/pics/Over4.jpg",
     imageAlt: "Placeholder — portada del EP",
   },
   {
@@ -361,27 +362,23 @@ export const story: StoryBlock[] = [
       en: "After a hiatus, Over Emotions came back in 2023 renewed, with new influences and a fresh sound — proof of an artist able to evolve with the scene while keeping his identity intact.",
       es: "Después de un receso, Over Emotions regresó en 2023 renovado, con nuevas influencias y un sonido fresco: la prueba de un artista capaz de evolucionar con la escena sin perder su identidad.",
     },
-    image: "/placeholders/story-05.svg",
+    image: "/media/pics/Over5.jpg",
     imageAlt: "Placeholder — artista en cabina",
   },
 ];
 
-/* ------------------------------------------------------------- SHOWREEL --- */
-/** Sección no montada en la página actual; se conserva para cuando haya video. */
-export const showreel = {
-  title: { en: "SHOWREEL", es: "SHOWREEL" } as Localized,
-  kicker: { en: "THE JOURNEY IN 60 SECONDS", es: "EL VIAJE EN 60 SEGUNDOS" } as Localized,
-  videoSrc: null as string | null,
-  poster: "/placeholders/showreel-poster.svg",
-  posterAlt: "Showreel poster placeholder",
-  cta: { en: "WATCH FULL SHOWREEL", es: "VER SHOWREEL COMPLETO" } as Localized,
-  beats: [
-    { id: "intro", label: { en: "THE INTRO", es: "LA INTRO" } as Localized, copy: { en: "The room tunes in.", es: "La sala sintoniza." } as Localized },
-    { id: "build", label: { en: "THE BUILD", es: "EL BUILD" } as Localized, copy: { en: "Mind and body align.", es: "Mente y cuerpo se alinean." } as Localized },
-    { id: "trip", label: { en: "THE JOURNEY", es: "EL VIAJE" } as Localized, copy: { en: "Deeper, further.", es: "Más profundo, más lejos." } as Localized },
-    { id: "drop", label: { en: "THE DROP", es: "EL DROP" } as Localized, copy: { en: "Everything lands at once.", es: "Todo cae a la vez." } as Localized },
-  ],
-  duration: "[DURACIÓN]",
+/* -------------------------------------------------------- OFFICIAL VIDEO --- */
+/** Video oficial del sencillo "Freakers". */
+export const officialVideo = {
+  title: { en: "FREAKERS", es: "FREAKERS" } as Localized,
+  kicker: { en: "OFFICIAL MUSIC VIDEO", es: "VIDEO OFICIAL" } as Localized,
+  description: {
+    en: "The official video for \"Freakers\", the new single from Over Emotions.",
+    es: "El video oficial de \"Freakers\", el nuevo sencillo de Over Emotions.",
+  } as Localized,
+  videoSrc: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792095298/Over_Emotions_-_Freakers_i9agmy.mp4",
+  poster: "/media/pics/freakers.png",
+  posterAlt: "Over Emotions — Freakers (official video)",
 } as const;
 
 /* ------------------------------------------------------ BOOKABLE FORMATS --- */
@@ -450,13 +447,13 @@ export const music: Track[] = [
     title: "OUT OF YOUR LOVE",
     type: "ORIGINAL",
     genre: "PSYTRANCE",
-    bpm: "[BPM]",
-    duration: "[—:—]",
-    productionLabel: "[SELLO]",
-    artwork: "/placeholders/art-01.svg",
-    externalUrl: SPOTIFY_ARTIST,
+    bpm: "150",
+    duration: "7:18",
+    productionLabel: "INDEPENDENT",
+    artwork: "/media/artwork/Out Of Your Love.jpg",
+    externalUrl: "https://open.spotify.com/track/1fA3oHdaqgBezEwAe187tW?si=21f0f146fe4743f7",
     externalLabel: "SPOTIFY",
-    audioSrc: null,
+    audioSrc: "/media/OverMP3/1- Over Emotions - Out Of Your Love (MP3).mp3",
   },
   {
     id: "r2",
@@ -464,13 +461,13 @@ export const music: Track[] = [
     title: "FREAKERS",
     type: "ORIGINAL",
     genre: "PSYTRANCE",
-    bpm: "[BPM]",
-    duration: "[—:—]",
-    productionLabel: "[SELLO]",
-    artwork: "/placeholders/art-02.svg",
-    externalUrl: SPOTIFY_ARTIST,
+    bpm: "145",
+    duration: "6:30",
+    productionLabel: "INDEPENDENT",
+    artwork: "/media/artwork/Freakers.jpg",
+    externalUrl: "https://open.spotify.com/track/45o0LvE2D0ahW7cNHcl2md?si=b768d00dd4f44168",
     externalLabel: "SPOTIFY",
-    audioSrc: null,
+    audioSrc: "/media/OverMP3/2- Over Emotions - Freakers (MP3).mp3",
   },
   {
     id: "r3",
@@ -478,13 +475,13 @@ export const music: Track[] = [
     title: "SPACE",
     type: "ORIGINAL",
     genre: "PSYTRANCE",
-    bpm: "[BPM]",
-    duration: "[—:—]",
-    productionLabel: "[SELLO]",
-    artwork: "/placeholders/art-03.svg",
-    externalUrl: SPOTIFY_ARTIST,
+    bpm: "145",
+    duration: "5:51",
+    productionLabel: "INDEPENDENT",
+    artwork: "/media/artwork/Space.jpg",
+    externalUrl: "https://open.spotify.com/track/3Evq2KphAKCCzGbKnkvdqe?si=d7e03fc42bc04396",
     externalLabel: "SPOTIFY",
-    audioSrc: null,
+    audioSrc: "/media/OverMP3/3- Over Emotions - Space (MP3).mp3",
   },
   {
     id: "r4",
@@ -492,27 +489,13 @@ export const music: Track[] = [
     title: "ARTIFICIAL INTELLIGENCE",
     type: "ORIGINAL",
     genre: "PSYTRANCE",
-    bpm: "[BPM]",
-    duration: "[—:—]",
-    productionLabel: "[SELLO]",
-    artwork: "/placeholders/art-04.svg",
+    bpm: "135",
+    duration: "[6:13]",
+    productionLabel: "INDEPENDENT",
+    artwork: "/media/brand/overemotions-logo-2026.png",
     externalUrl: SPOTIFY_ARTIST,
-    externalLabel: "SPOTIFY",
-    audioSrc: null,
-  },
-  {
-    id: "r5",
-    category: "releases",
-    title: "DEMONS IN MY HEAD",
-    type: "EP / 2013",
-    genre: "PSYTRANCE",
-    bpm: "[BPM]",
-    duration: "[—:—]",
-    productionLabel: "GREEN TREE RECORDS",
-    artwork: "/placeholders/art-05.svg",
-    externalUrl: null,
-    externalLabel: "[LINK PENDIENTE]",
-    audioSrc: null,
+    externalLabel: "UNRELEASED",
+    audioSrc: "/media/OverMP3/4- Over Emotions - Artificial Intelligence (MP3).mp3",
   },
   {
     id: "s1",
@@ -561,7 +544,7 @@ export const credibility = {
   stats: [
     { label: { en: "ACTIVE SINCE", es: "ACTIVO DESDE" } as Localized, value: { en: "2010", es: "2010" } as Localized },
     { label: { en: "FIRST EP", es: "PRIMER EP" } as Localized, value: { en: "2013", es: "2013" } as Localized },
-    { label: { en: "LABEL", es: "SELLO" } as Localized, value: { en: "GREEN TREE (BE)", es: "GREEN TREE (BE)" } as Localized },
+    { label: { en: "LABEL", es: "SELLO" } as Localized, value: { en: "INDEPENDENT", es: "INDEPENDIENTE" } as Localized },
     { label: { en: "THE RETURN", es: "EL REGRESO" } as Localized, value: { en: "2023", es: "2023" } as Localized },
   ],
   /** PDF — ha compartido escenario con: */
@@ -596,8 +579,8 @@ export const vault: VaultAsset[] = [
     name: "PRESS KIT PDF",
     description: { en: "Bio, short bio, artistic vision, genres, sets, rider and links.", es: "Biografía, bio corta, visión artística, géneros, sets, rider y enlaces." },
     format: "PDF",
-    size: "84KB",
-    href: "/media/docs/Over_Emotions_Press_Kit.pdf",
+    size: "4.7MB",
+    href: "https://res.cloudinary.com/dn4m0kr7j/image/upload/v1792099781/Over_Emotions_Official_Media_Kit_2026_shblkw.pdf",
     icon: "document",
   },
   {
@@ -605,17 +588,17 @@ export const vault: VaultAsset[] = [
     name: "TECH RIDER",
     description: { en: "Booth requirements. Included in the press kit PDF.", es: "Requisitos de cabina. Incluido en el PDF del press kit." },
     format: "PDF",
-    size: "84KB",
-    href: "/media/docs/Over_Emotions_Press_Kit.pdf",
+    size: "2.5MB",
+    href: "https://res.cloudinary.com/dn4m0kr7j/image/upload/v1792099894/Over_Emotions_Official__2026TechRider_dfgchv.pdf",
     icon: "wrench",
   },
   {
     id: "press-photos",
     name: "PRESS PHOTOS",
     description: { en: "High-resolution live and portrait selection.", es: "Selección de fotos en vivo y retratos en alta resolución." },
-    format: "ZIP",
+    format: "DRIVE",
     size: null,
-    href: null,
+    href: "https://drive.google.com/drive/folders/1r5oEJWapiZYeuSMq6KaiEVojyGCQK5Jx?usp=sharing",
     icon: "image",
   },
   {
@@ -667,9 +650,6 @@ export const booking = {
 
 export const contact = {
   bookingEmail: "over.emotions.live.act@gmail.com",
-  /** Formato internacional, sólo dígitos. `null` oculta todos los botones de WhatsApp. */
-  whatsapp: "526141548922" as string | null,
-  whatsappDisplay: "+52 614 154 8922",
   instagram: "https://www.instagram.com/over.emotions.music",
   instagramHandle: "@over.emotions.music",
   socials: [
@@ -693,7 +673,6 @@ export const dossier = {
     bio: { en: "SHORT BIO", es: "BIO CORTA" } as Localized,
     genres: { en: "GENRES", es: "GÉNEROS" } as Localized,
     formats: { en: "SETS", es: "SETS" } as Localized,
-    showreel: { en: "SHOWREEL", es: "SHOWREEL" } as Localized,
     music: { en: "MUSIC", es: "MÚSICA" } as Localized,
     photos: { en: "PRESS PHOTOS", es: "FOTOS DE PRENSA" } as Localized,
     rider: { en: "TECHNICAL RIDER", es: "RIDER TÉCNICO" } as Localized,

@@ -8,7 +8,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { artist, contact, footer, getText, sections } from "@/data/presskit";
 import { Marquee, MarqueeItem } from "@/components/ui/marquee";
 import { useLocale } from "@/components/over-emotions/frequency-provider";
@@ -60,19 +59,6 @@ export function SiteFooter() {
                   {contact.bookingEmail}
                 </a>
               </li>
-              {contact.whatsapp && (
-              <li>
-                <a
-                  href={`https://wa.me/${contact.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="label flex min-h-11 items-center gap-1 text-label-xs text-bone-dim transition-colors hover:text-acid"
-                >
-                  {contact.whatsappDisplay}
-                  <ArrowUpRight className="size-3" aria-hidden="true" />
-                </a>
-              </li>
-              )}
             </ul>
           </div>
 

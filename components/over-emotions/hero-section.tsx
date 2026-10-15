@@ -123,6 +123,7 @@ export function HeroSection() {
   }, [melt]);
 
   const titleY = useTransform(scrollYProgress, [0, 1], ["0%", "-18%"]);
+  const photoY = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
   const infoY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
   // Fades out before it can drift into the marquee below.
   const infoOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
@@ -162,6 +163,26 @@ export function HeroSection() {
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-void" />
       </div>
 
+      {/* ------------------------------------------------------ 1b. PHOTO --- */}
+      {/* Transparent cut-out over the shader. Mobile: full frame, fading out
+          toward the bottom so the logo and copy sit on the melt. Desktop: right
+          side, fading toward the logo on the left and into the marquee below. */}
+      <motion.div
+        aria-hidden="true"
+        style={staticLayer ? undefined : { y: photoY }}
+        className="oe-hero-photo pointer-events-none absolute inset-x-0 top-0 -z-[5] h-[calc(62svh+7rem)] md:inset-y-0 md:right-0 md:left-auto md:h-full md:w-[60%]"
+      >
+        <Image
+          src="/media/pics/over-hero.png"
+          alt=""
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, 60vw"
+          className="object-cover object-[50%_25%] select-none md:object-[50%_100%]"
+          draggable={false}
+        />
+      </motion.div>
+
       <div className="gutter relative flex min-h-[100svh] flex-col justify-between gap-10 pt-24 pb-6 md:pt-28">
         {/* ========================================================= 2. LOGO == */}
         <svg aria-hidden="true" width="0" height="0" className="absolute">
@@ -194,14 +215,13 @@ export function HeroSection() {
 
         <motion.div
           style={staticLayer ? undefined : { y: titleY }}
-          className="relative flex flex-1 items-center justify-center"
+          className="relative flex min-h-[62svh] flex-1 items-end justify-start md:min-h-0 md:items-center"
         >
           <h1 id="hero-title" className="w-full" style={{ mixBlendMode: "difference" }}>
             <span className="sr-only">{artist.name}</span>
             <div
               ref={logoRef}
-              className="mx-auto origin-top will-change-[filter,transform]"
-              style={{ width: "min(94vw, calc(48svh * 1.7), 1080px)" }}
+              className="oe-hero-logo origin-top will-change-[filter,transform]"
             >
               <Image
                 src={artist.logos.hero.src}
@@ -209,7 +229,7 @@ export function HeroSection() {
                 width={artist.logos.hero.width}
                 height={artist.logos.hero.height}
                 priority
-                sizes="(max-width: 768px) 94vw, 1180px"
+                sizes="(max-width: 768px) 70vw, 52vw"
                 className="h-auto w-full select-none"
                 draggable={false}
               />

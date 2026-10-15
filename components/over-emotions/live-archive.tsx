@@ -22,7 +22,7 @@ export function LiveArchive() {
         <Reveal>
           <SectionHeader
             id="archive-title"
-            number="06"
+            number="07"
             title={locale === "en" ? "LIVE ARCHIVE" : "ARCHIVO EN VIVO"}
             kicker={locale === "en" ? "STAGES / CROWDS / BOOTHS" : "ESCENARIOS / PÚBLICO / CABINAS"}
           />

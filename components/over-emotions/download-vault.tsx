@@ -51,7 +51,7 @@ export function DownloadVault() {
           <Reveal>
             <SectionHeader
               id="vault-title"
-              number="07"
+              number="08"
               title={locale === "en" ? "DOWNLOAD VAULT" : "ARCHIVO DE DESCARGAS"}
               kicker={locale === "en" ? "PRESS MATERIAL" : "MATERIAL DE PRENSA"}
             />

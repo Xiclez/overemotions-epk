@@ -3,7 +3,7 @@
 /**
  * MobileBookingBar — fixed conversion bar in the thumb zone.
  *
- * Mobile priority order from the brief is speed, clarity, booking, showreel,
+ * Mobile priority order from the brief is speed, clarity, booking, video,
  * genres, contact — so on phones the two things a booker needs are pinned to the
  * bottom of the screen rather than left somewhere up the scroll.
  *

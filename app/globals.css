@@ -491,3 +491,29 @@ body {
     display: none;
   }
 }
+
+/* ---------------------------------------------------------- HERO PHOTO --- */
+/* Mobile: photo fills the frame, logo bottom-left. Desktop (md): logo large on
+   the left, photo on the right fading toward it. */
+.oe-hero-photo {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+}
+.oe-hero-logo {
+  width: min(70vw, 26rem);
+}
+@media (min-width: 64rem) {
+  .oe-hero-photo {
+    -webkit-mask-image:
+      linear-gradient(to right, transparent 0%, #000 38%),
+      linear-gradient(to bottom, #000 70%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(to right, transparent 0%, #000 38%),
+      linear-gradient(to bottom, #000 70%, transparent 100%);
+    mask-composite: intersect;
+  }
+  .oe-hero-logo {
+    width: min(52vw, calc(52svh * 1.7), 960px);
+  }
+}

@@ -14,13 +14,13 @@
  */
 
 import * as React from "react";
+import Image from "next/image";
 import {
   ArrowRight,
   CheckCircle2,
   Download,
   AtSign,
   Mail,
-  MessageCircle,
   RotateCcw,
 } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
@@ -291,18 +291,6 @@ export function BookingSection() {
                       {locale === "en" ? "EMAIL" : "CORREO"}
                     </a>
                   </Button>
-                  {contact.whatsapp && (
-                  <Button variant="plate" asChild>
-                    <a
-                      href={`https://wa.me/${contact.whatsapp}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <MessageCircle className="size-4" aria-hidden="true" />
-                      WHATSAPP
-                    </a>
-                  </Button>
-                  )}
                   <Button variant="plate" asChild>
                     <a
                       href={contact.instagram}
@@ -330,6 +318,21 @@ export function BookingSection() {
                 quality={quality === "high" ? "medium" : quality}
                 paused={Boolean(reduced)}
                 className="h-full w-full"
+              />
+              {/* Cut-out portrait over the melt; fades out toward the rim */}
+              <Image
+                src="/media/pics/over-footer.png"
+                alt={locale === "en" ? "Over Emotions portrait" : "Retrato de Over Emotions"}
+                fill
+                sizes="(max-width: 768px) 90vw, 28rem"
+                className="object-cover object-[50%_18%] select-none"
+                style={{
+                  maskImage:
+                    "linear-gradient(to bottom, #000 0%, #000 62%, transparent 92%)",
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, #000 0%, #000 62%, transparent 92%)",
+                }}
+                draggable={false}
               />
             </div>
             <span
