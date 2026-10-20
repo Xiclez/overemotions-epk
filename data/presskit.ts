@@ -373,12 +373,24 @@ export const officialVideo = {
   title: { en: "FREAKERS", es: "FREAKERS" } as Localized,
   kicker: { en: "OFFICIAL MUSIC VIDEO", es: "VIDEO OFICIAL" } as Localized,
   description: {
-    en: "The official video for \"Freakers\", the new single from Over Emotions.",
-    es: "El video oficial de \"Freakers\", el nuevo sencillo de Over Emotions.",
+    en: "The official video for \"Freakers\", the most terrifying single from Over Emotions.",
+    es: "El video oficial de \"Freakers\", el sencillo más terrorífico de Over Emotions.",
   } as Localized,
-  videoSrc: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792095298/Over_Emotions_-_Freakers_i9agmy.mp4",
+  videoSrc: "https://res.cloudinary.com/dn4m0kr7j/video/upload/q_auto/v1792095298/Over_Emotions_-_Freakers_i9agmy.mp4",
   poster: "/media/pics/freakers.png",
   posterAlt: "Over Emotions — Freakers (official video)",
+  /**
+   * Highlights: miniaturas en loop (sin audio) debajo del video principal.
+   * Al hacer clic, el player reproduce el video completo de `start` a `end` (segundos).
+   */
+  highlights: [
+    { id: "h1", start: 58, end: 64, clip: "/media/video/freakers-highlight-1.mp4", label: { en: "THE RABBIT", es: "EL CONEJO" } as Localized },
+    { id: "h2", start: 218, end: 224, clip: "/media/video/freakers-highlight-2.mp4", label: { en: "THE PARTY", es: "LA FIESTA" } as Localized },
+    { id: "h3", start: 234, end: 240, clip: "/media/video/freakers-highlight-3.mp4", label: { en: "MASKS", es: "MÁSCARAS" } as Localized },
+    { id: "h4", start: 242, end: 248, clip: "/media/video/freakers-highlight-4.mp4", label: { en: "FIRE", es: "FUEGO" } as Localized },
+    { id: "h5", start: 254, end: 260, clip: "/media/video/freakers-highlight-5.mp4", label: { en: "THE GRIN", es: "LA SONRISA" } as Localized },
+    { id: "h6", start: 298, end: 304, clip: "/media/video/freakers-highlight-6.mp4", label: { en: "PUMPKIN", es: "CALABAZA" } as Localized },
+  ],
 } as const;
 
 /* ------------------------------------------------------ BOOKABLE FORMATS --- */
@@ -447,7 +459,7 @@ export const music: Track[] = [
     title: "OUT OF YOUR LOVE",
     type: "ORIGINAL",
     genre: "PSYTRANCE",
-    bpm: "150",
+    bpm: "145",
     duration: "7:18",
     productionLabel: "INDEPENDENT",
     artwork: "/media/artwork/Out Of Your Love.jpg",
@@ -489,10 +501,10 @@ export const music: Track[] = [
     title: "ARTIFICIAL INTELLIGENCE",
     type: "ORIGINAL",
     genre: "PSYTRANCE",
-    bpm: "135",
+    bpm: "136",
     duration: "[6:13]",
     productionLabel: "INDEPENDENT",
-    artwork: "/media/brand/overemotions-logo-2026.png",
+    artwork: "/media/artwork/Artificial-intelligence.png",
     externalUrl: SPOTIFY_ARTIST,
     externalLabel: "UNRELEASED",
     audioSrc: "/media/OverMP3/4- Over Emotions - Artificial Intelligence (MP3).mp3",
@@ -530,12 +542,18 @@ export const music: Track[] = [
 /* ---------------------------------------------------------- LIVE ARCHIVE --- */
 /** Videos pendientes: se muestra el poster hasta que exista `video`. */
 export const archive: ArchiveItem[] = [
-  { id: "a1", venue: "[FESTIVAL / CLUB]", city: "[CIUDAD]", date: "[FECHA]", video: null, poster: "/placeholders/live-01.svg", imageAlt: "Placeholder — video en vivo", scale: "lg", mode: "psytrance" },
-  { id: "a2", venue: "[FESTIVAL / CLUB]", city: "[CIUDAD]", date: "[FECHA]", video: null, poster: "/placeholders/live-02.svg", imageAlt: "Placeholder — video en vivo", scale: "md", mode: "psytech" },
-  { id: "a3", venue: "[FESTIVAL / CLUB]", city: "[CIUDAD]", date: "[FECHA]", video: null, poster: "/placeholders/live-03.svg", imageAlt: "Placeholder — video en vivo", scale: "sm", mode: "psytrance" },
-  { id: "a4", venue: "[FESTIVAL / CLUB]", city: "[CIUDAD]", date: "[FECHA]", video: null, poster: "/placeholders/live-04.svg", imageAlt: "Placeholder — video en vivo", scale: "lg", mode: "psytech" },
-  { id: "a5", venue: "[FESTIVAL / CLUB]", city: "[CIUDAD]", date: "[FECHA]", video: null, poster: "/placeholders/live-05.svg", imageAlt: "Placeholder — video en vivo", scale: "md", mode: "psytrance" },
-  { id: "a6", venue: "[FESTIVAL / CLUB]", city: "[CIUDAD]", date: "[FECHA]", video: null, poster: "/placeholders/live-06.svg", imageAlt: "Placeholder — video en vivo", scale: "sm", mode: "psytech" },
+  { id: "a1", venue: "ZULU COCKTAIL & LOUNGE", city: "CHIHUAHUA", date: "16/05/26", video: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792510571/over_vid9_m2sliz.mp4", poster: "/placeholders/live-01.svg", imageAlt: "Placeholder — video en vivo", scale: "lg", mode: "psytrance" },
+  { id: "a2", venue: "[FESTIVAL / CLUB]", city: "[CIUDAD]", date: "[FECHA]", video: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792510571/over_vid10_um8ah7.mp4", poster: "/placeholders/live-02.svg", imageAlt: "Placeholder — video en vivo", scale: "md", mode: "psytech" },
+  { id: "a3", venue: "[FESTIVAL / CLUB]", city: "[CIUDAD]", date: "[FECHA]", video: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792510570/over_vid11_whseev.mp4", poster: "/placeholders/live-03.svg", imageAlt: "Placeholder — video en vivo", scale: "sm", mode: "psytrance" },
+  { id: "a4", venue: "ZULU COCKTAIL & LOUNGE", city: "CHIHUAHUA", date: "16/05/26", video: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792510569/over_vid4_ha1kxw.mov", poster: "/placeholders/live-04.svg", imageAlt: "Placeholder — video en vivo", scale: "lg", mode: "psytech" },
+  { id: "a5", venue: "ZULU COCKTAIL & LOUNGE", city: "CHIHUAHUA", date: "16/05/26", video: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792510569/over_vid8_ks0pus.mov", poster: "/placeholders/live-05.svg", imageAlt: "Placeholder — video en vivo", scale: "md", mode: "psytrance" },
+  { id: "a6", venue: "ZULU COCKTAIL & LOUNGE", city: "CHIHUAHUA", date: "16/05/26", video: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792510569/over_vid6_mb1vnb.mp4", poster: "/placeholders/live-06.svg", imageAlt: "Placeholder — video en vivo", scale: "sm", mode: "psytech" },
+  { id: "a7", venue: "ZULU COCKTAIL & LOUNGE", city: "CHIHUAHUA", date: "16/05/26", video: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792510567/over_vid3_sgz0ai.mp4", poster: "/placeholders/live-07.svg", imageAlt: "Placeholder — video en vivo", scale: "lg", mode: "psytrance" },
+  { id: "a8", venue: "ZULU COCKTAIL & LOUNGE", city: "CHIHUAHUA", date: "16/05/26", video: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792510567/over_vid2_crd0xv.mov", poster: "/placeholders/live-08.svg", imageAlt: "Placeholder — video en vivo", scale: "md", mode: "psytech" },
+  { id: "a9", venue: "ZULU COCKTAIL & LOUNGE", city: "CHIHUAHUA", date: "16/05/26", video: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792510567/over_vid1_nr2aso.mov", poster: "/placeholders/live-09.svg", imageAlt: "Placeholder — video en vivo", scale: "sm", mode: "psytrance" },
+  { id: "a10", venue: "ZULU COCKTAIL & LOUNGE", city: "CHIHUAHUA", date: "16/05/26", video: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792510567/over_vid7_gl4ght.mov", poster: "/placeholders/live-10.svg", imageAlt: "Placeholder — video en vivo", scale: "lg", mode: "psytech" },
+  { id: "a11", venue: "ZULU COCKTAIL & LOUNGE", city: "CHIHUAHUA", date: "16/05/26", video: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792510567/over_vid5_offvqk.mp4", poster: "/placeholders/live-11.svg", imageAlt: "Placeholder — video en vivo", scale: "md", mode: "psytrance" },
+  { id: "a12", venue: "[FESTIVAL / CLUB]", city: "[CIUDAD]", date: "[FECHA]", video: "https://res.cloudinary.com/dn4m0kr7j/video/upload/v1792510567/over_vid12_favnkk.mp4", poster: "/placeholders/live-12.svg", imageAlt: "Placeholder — video en vivo", scale: "sm", mode: "psytech" },
 ];
 
 /* ----------------------------------------------------------- CREDIBILITY --- */
@@ -544,7 +562,8 @@ export const credibility = {
   stats: [
     { label: { en: "ACTIVE SINCE", es: "ACTIVO DESDE" } as Localized, value: { en: "2010", es: "2010" } as Localized },
     { label: { en: "FIRST EP", es: "PRIMER EP" } as Localized, value: { en: "2013", es: "2013" } as Localized },
-    { label: { en: "LABEL", es: "SELLO" } as Localized, value: { en: "INDEPENDENT", es: "INDEPENDIENTE" } as Localized },
+    { label: { en: "LABEL", es: "SELLO" } as Localized, value: { en: "INDEPEN­DENT", es: "INDEPEN­DIENTE" } as Localized },
+    // ­ = guion suave: en móvil la palabra se parte ahí en vez de encogerse.
     { label: { en: "THE RETURN", es: "EL REGRESO" } as Localized, value: { en: "2023", es: "2023" } as Localized },
   ],
   /** PDF — ha compartido escenario con: */

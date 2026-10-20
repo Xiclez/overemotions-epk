@@ -244,7 +244,7 @@ export function BookingSection() {
           <div className="flex flex-col gap-8">
             <div className="flex items-center gap-4">
               <span className="label text-label-xs text-acid tabular-nums">
-                08
+                09
               </span>
               <span aria-hidden="true" className="h-px w-12 bg-border-strong" />
               <span className="label text-label-xs text-gray">{locale === "en" ? "BOOKING" : "RESERVAS"}</span>
@@ -339,9 +339,6 @@ export function BookingSection() {
               aria-hidden="true"
               className="pointer-events-none absolute -inset-3 rounded-full border border-bone/10"
             />
-            <span className="label absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap border border-border-strong bg-void/70 px-3 py-1 text-label-xs text-bone backdrop-blur-sm">
-              {mode.label} / {mode.bpm} BPM
-            </span>
           </div>
         </div>
 

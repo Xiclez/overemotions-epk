@@ -44,13 +44,11 @@ export function CredibilitySection() {
         >
           {credibility.stats.map((stat, index) => (
             <RevealItem key={`${getText(stat.label, locale)}-${index}`}>
-              <div className="flex h-full flex-col justify-between gap-6 bg-void p-5 md:p-6">
+              <div className="@container flex h-full flex-col justify-between gap-6 bg-void p-5 md:p-6">
                 <span className="label text-label-xs text-gray">
                   {getText(stat.label, locale)}
                 </span>
-                <span className="font-display text-[clamp(1.25rem,3.4vw,2.4rem)] leading-none text-bone">
-                  {getText(stat.value, locale)}
-                </span>
+                <StatValue value={getText(stat.value, locale)} />
               </div>
             </RevealItem>
           ))}
@@ -138,3 +136,30 @@ export function CredibilitySection() {
 }
 
 export default CredibilitySection;
+
+/**
+ * Long words (INDEPENDIENTE) must never clip. The size is capped so the word fits
+ * the card on one line from md up; below md it may break at its soft hyphen
+ * (­) so each half stays as large as the years beside it.
+ */
+function StatValue({ value }: { value: string }) {
+  const SIZE = "clamp(1.25rem, 3.4vw, 2.4rem)";
+  const EM_PER_CHAR = 0.95; // Climate Crisis caps run ~0.9em wide
+  const full = value.replace(/­/g, "").length;
+  const parts = value.split("­");
+  const segment = Math.max(...parts.map((p) => p.length)) + (parts.length > 1 ? 1 : 0);
+
+  return (
+    <span
+      className="font-display leading-[1.05] text-bone hyphens-manual text-(length:--fit-segment) md:text-(length:--fit-full)"
+      style={
+        {
+          "--fit-full": `min(${SIZE}, calc(100cqw / ${full * EM_PER_CHAR}))`,
+          "--fit-segment": `min(${SIZE}, calc(100cqw / ${segment * EM_PER_CHAR}))`,
+        } as React.CSSProperties
+      }
+    >
+      {value}
+    </span>
+  );
+}

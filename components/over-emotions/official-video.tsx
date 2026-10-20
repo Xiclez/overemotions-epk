@@ -2,7 +2,8 @@
 
 /**
  * OfficialVideo — the official music video for the single "Freakers".
- * Poster tile opens the accessible video modal (MediaPlayer).
+ * Static poster tile plus a strip of looping highlight thumbnails; each opens the
+ * accessible video modal (MediaPlayer) at its own segment.
  */
 
 import { getText, officialVideo } from "@/data/presskit";
@@ -34,6 +35,7 @@ export function OfficialVideo() {
           <MediaPlayer
             src={officialVideo.videoSrc}
             poster={officialVideo.poster}
+            highlights={officialVideo.highlights.map((h) => ({ ...h, label: getText(h.label, locale) }))}
             posterAlt={officialVideo.posterAlt}
             title={`OVER EMOTIONS — ${title} (${kicker})`}
             kicker={`${kicker} / ${title}`}
