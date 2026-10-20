@@ -222,7 +222,7 @@ export function BookingDrawer() {
 
             {/* PRESS PHOTOS ------------------------------------------------- */}
             <DossierBlock title={getText(dossier.sections.photos, locale)}>              <div className="grid grid-cols-3 gap-2">
-              {["/placeholders/portrait.svg", "/placeholders/live-04.svg", "/placeholders/live-01.svg"].map(
+              {["/media/pics/Over1.jpg", "/media/pics/Over2.jpg", "/media/pics/Over3.jpg"].map(
                 (src) => (
                   <div
                     key={src}
