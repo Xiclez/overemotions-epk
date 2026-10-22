@@ -64,10 +64,28 @@ export const metadata: Metadata = {
     "booking",
     "press kit",
   ],
+  // Base for the absolute URLs that Facebook / WhatsApp / X need for the share
+  // image. On Vercel this falls back to the production domain automatically.
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : "http://localhost:3000"),
+  ),
+  // Share image, icons: app/opengraph-image.jpg, app/twitter-image.jpg,
+  // app/icon.png and app/apple-icon.png are picked up by file convention.
   openGraph: {
     title: `${artist.name} — Press Kit`,
     description: getText(bio.oneLiner, "es"),
+    siteName: `${artist.name} EPK`,
+    locale: "es_MX",
+    alternateLocale: ["en_US"],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${artist.name} — Press Kit`,
+    description: getText(bio.oneLiner, "es"),
   },
   // Flip to index once the placeholder music/video/photo assets are replaced.
   robots: { index: false, follow: false },

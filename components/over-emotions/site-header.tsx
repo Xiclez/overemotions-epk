@@ -150,7 +150,7 @@ export function SiteHeader() {
               }
               className="size-10 border-border-strong text-bone hover:border-acid xs:size-11"
             >
-              <span className="text-label-xs uppercase">{locale === "en" ? "ES" : "EN"}</span>
+              <span className="text-label-xs uppercase">{locale === "en" ? "EN" : "ES"}</span>
             </Button>
 
             {/* NUEVO: Contenedor relativo para el botón de volumen y su tooltip */}

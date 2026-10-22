@@ -109,14 +109,17 @@ export function DownloadVault() {
           <div className="mt-8 flex flex-col gap-4 border border-border bg-charcoal/50 p-5 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-body-sm text-bone-dim">
               {locale === "en"
-                ? "Need everything at once? The press kit PDF bundles bio, vision, genres, sets, rider and links in a single file."
-                : "¿Todo a la vez? El PDF del press kit reúne bio, visión, géneros, sets, rider y enlaces en un solo archivo."}
+                ? "Need everything at once? Get the full press material in a single download."
+                : "¿Todo a la vez? Descarga todo el material de prensa en un solo archivo."}
             </p>
-            {/* Usamos asChild para que el Button de tu UI actúe como una etiqueta <a> */}
             <Button variant="outline" className="shrink-0" asChild>
-              <a href="/media/docs/Over_Emotions_Press_Kit.pdf" download="Over_Emotions_Press_Kit.pdf">
+              <a
+                href="https://drive.google.com/file/d/1CuXmvS7Fw7LcbyVunXBHXOLXCI1QSio1/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Download className="size-4" aria-hidden="true" />
-                {locale === "en" ? "DOWNLOAD PRESS KIT" : "DESCARGAR PRESS KIT"}
+                {locale === "en" ? "DOWNLOAD EVERYTHING" : "DESCARGAR TODO"}
               </a>
             </Button>
           </div>
